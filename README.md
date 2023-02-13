@@ -10,9 +10,9 @@ Dans ce test il s'agira:
 La stack technique est assez libre, utilisez les technos sur lesquelles vous êtes à l'aise.
 Dans ce test, pas de pression mais on aura certaines exigences :) notamment sur :
 
-la segmentation des composants;
-la propreté du code;
-la logique d’intégration;
+- la segmentation des composants;
+- la propreté du code;
+- la logique d’intégration;
 
 Lien de l'API:
 
