@@ -6,7 +6,7 @@ const Search = ({ onSearch }) => {
   const handleInputChange = (event) => {
     const newQuery = event.target.value;
     setQuery(newQuery);
-    onSearch(newQuery); // Appeler la fonction onSearch à chaque changement de valeur du champ de recherche
+    onSearch(newQuery); 
   };
 
   return (
