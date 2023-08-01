@@ -81,7 +81,7 @@ const Liste = () => {
             </div>
             <div style={{ flex: 6, textAlign: 'left' }}>
               {/* Affichage du nom et de l'adresse du pinpoint */}
-              <h2>{pinpoint.name}</h2>
+              <h2 style={{ fontWeight: 'bold' }}>{pinpoint.name}</h2>
               <p>{pinpoint.address}</p>
             </div>
             <div style={{ flex: 1, textAlign: 'right', marginLeft: '90px' }}>
