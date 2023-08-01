@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { getPinpoints } from '../service/api'; // Import de la fonction pour récupérer les pinpoints depuis le service API
-import ImageRemplace from '../assets/image/wemap1.jpg'; // Import de l'image de remplacement
+import ImageRemplace from '../assets/image/wemap2.png'; // Import de l'image de remplacement
 import Footer from '../components/Footer'; // Import du composant Footer
 import Search from '../components/Search'; // Import du composant Search
 import '../assets/css/Liste.css'; // Import du fichier CSS Liste.css
@@ -57,7 +57,7 @@ const Liste = () => {
 
   return (
     <div>
-      {/* Composant Search pour effectuer des recherches */}
+      {/* Composant Search pour effectuer des recherches avec une recherche automatique*/}
       <Search
         onSearch={(query) => setSearchQuery(query)}
         placeholder="Rechercher...."
@@ -78,6 +78,7 @@ const Liste = () => {
                   <img src={ImageRemplace} alt="Image de remplacement" />
                 )}
               </div>
+
             </div>
             <div style={{ flex: 6, textAlign: 'left' }}>
               {/* Affichage du nom et de l'adresse du pinpoint */}
