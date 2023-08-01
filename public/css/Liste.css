@@ -28,7 +28,7 @@
   
   .button-view-map {
     background-color: #FAFAFA;
-    color: blue;
+    color: rgb(13, 190, 234);
     padding: 10px 10px;
     border: none;
     border-radius: 5px;
@@ -43,5 +43,33 @@
   
   .button-view-map:hover {
     background-color: lightblue;
+  }
+  /* Footer */
+.footer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .footer-button {
+    background-color: #f5f7f9;
+    color: rgb(0, 0, 0);
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  
+  .footer-page-number {
+    color: #000000;
+    font-weight: bold;
+  }
+  
+  .footer-button.disabled {
+    opacity: 0.5;
+    pointer-events: none;
   }
   
