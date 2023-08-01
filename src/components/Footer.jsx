@@ -1,11 +1,11 @@
 import React from 'react';
 import '../assets/css/Liste.css'; 
 
-const Footer = ({ page, totalPages, handlePrevPage, handleNextPage, isLastPage }) => {
+const Footer = ({ page, totalPages, handlePrecedentPage, handleNextPage, isLastPage }) => {
   return (
     <div className="footer-container">
       <button
-        onClick={handlePrevPage}
+        onClick={handlePrecedentPage}
         className={`footer-button ${page === 1 ? 'disabled' : ''}`}
       >
         &lt;

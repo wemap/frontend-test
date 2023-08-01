@@ -4,7 +4,6 @@ import ImageRemplace from '../assets/image/wemap2.png'; // Import de l'image de 
 import Footer from '../components/Footer'; // Import du composant Footer
 import Search from '../components/Search'; // Import du composant Search
 import '../assets/css/Liste.css'; // Import du fichier CSS Liste.css
-
 const Liste = () => {
   // State pour stocker les données des pinpoints
   const [pinpoints, setPinpoints] = useState([]);
@@ -13,7 +12,7 @@ const Liste = () => {
   const [limit, setLimit] = useState(10);
   const [totalPages, setTotalPages] = useState(0);
   // State pour gérer la recherche
-  const [searchQuery, setSearchQuery] = useState('');
+  const [searchrequete, setSearchrequete] = useState('');
 
   // Effet pour récupérer le nombre total de pages
   useEffect(() => {
@@ -25,8 +24,8 @@ const Liste = () => {
   }, [limit]);
 
   // Fonction pour récupérer les pinpoints en fonction de la recherche, de la pagination, et de la limite d'affichage
-  const fetchPinpoints = (query, offset, limit) => {
-    getPinpoints(query, offset, limit)
+  const chercherPinpoints = (requete, offset, limit) => {
+    getPinpoints(requete, offset, limit)
       .then((data) => {
         setPinpoints(data);
         setTotalPages(Math.ceil(data.total / limit));
@@ -37,29 +36,29 @@ const Liste = () => {
   // Effet pour mettre à jour les pinpoints en fonction de la recherche, de la pagination et de la limite d'affichage
   useEffect(() => {
     const offset = (page - 1) * limit;
-    fetchPinpoints(searchQuery, offset, limit);
-  }, [page, limit, searchQuery]);
+    chercherPinpoints(searchrequete, offset, limit);
+  }, [page, limit, searchrequete]);
 
   // Fonction pour rediriger vers la carte du pinpoint sélectionné
-  const handleViewOnMap = (pinpointId) => {
+  const VoirMap = (pinpointId) => {
     window.location.href = `https://livemap.getwemap.com/#/pinpoints/${pinpointId}`;
   };
 
   // Fonction pour passer à la page précédente
-  const handlePrevPage = () => {
-    setPage((prevPage) => Math.max(prevPage - 1, 1));
+  const handlePrecedentPage = () => {
+    setPage((PrecedentPage) => Math.max(PrecedentPage - 1, 1));
   };
 
   // Fonction pour passer à la page suivante
   const handleNextPage = () => {
-    setPage((prevPage) => prevPage + 1);
+    setPage((PrecedentPage) => PrecedentPage + 1);
   };
 
   return (
     <div>
       {/* Composant Search pour effectuer des recherches avec une recherche automatique*/}
       <Search
-        onSearch={(query) => setSearchQuery(query)}
+        onSearch={(requete) => setSearchrequete(requete)}
         placeholder="Rechercher...."
       />
       <ul className="liste-container">
@@ -88,7 +87,7 @@ const Liste = () => {
             <div style={{ flex: 1, textAlign: 'right', marginLeft: '90px' }}>
               {/* Bouton pour voir le pinpoint sur la carte */}
               <button
-                onClick={() => handleViewOnMap(pinpoint.id)}
+                onClick={() => VoirMap(pinpoint.id)}
                 className="button-view-map"
               >
                 Voir sur la carte
@@ -102,7 +101,7 @@ const Liste = () => {
       <Footer
         page={page}
         totalPages={totalPages}
-        handlePrevPage={handlePrevPage}
+        handlePrecedentPage={handlePrecedentPage}
         handleNextPage={handleNextPage}
         isLastPage={pinpoints.length < limit}
       />
