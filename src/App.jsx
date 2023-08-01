@@ -5,10 +5,15 @@ import Header from '../src/components/header';
 
 const App = () => {
   return (
-   <div>
-       <Header/>
+    <> 
+   
+    <div className="header-container" > 
+      <Header/></div>
+   
+   <div >
       <Liste/>
     </div>
+    </>
   );
 };
 

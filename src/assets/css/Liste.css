@@ -18,6 +18,8 @@
     overflow: hidden;
     background-size: cover;
     background-position: center;
+    box-shadow: 0px 10px 10px rgba(4,3, 1, 5); 
+
   }
   
   .pinpoint-image img {
@@ -28,7 +30,7 @@
   
   .button-view-map {
     background-color: #FAFAFA;
-    color: rgb(13, 190, 234);
+    color: rgb(9, 160, 197);
     padding: 10px 10px;
     border: none;
     border-radius: 5px;
@@ -72,4 +74,3 @@
     opacity: 0.5;
     pointer-events: none;
   }
-  

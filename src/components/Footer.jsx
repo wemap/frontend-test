@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../public/css/Liste.css'; 
+import '../assets/css/Liste.css'; 
 
 const Footer = ({ page, totalPages, handlePrevPage, handleNextPage, isLastPage }) => {
   return (
